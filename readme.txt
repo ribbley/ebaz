@@ -15,14 +15,13 @@ You should be able to create a general project including the first stage bootloa
 
 I tried to follow the tutorial over on: https://embed-me.com/ (Blog series about using the EBAZ board with petalinux) - but failed and wanted to get it to run with buildroot.
 
-Custom ebaz board config
-Features:
+# Features:
 - uses the current most-up-to-date xilinx-linux and xilinx-uboot repos
 - nice shell prompt
 - ascii-invaders preinstalled
 - thttpd preinstalled, fetches data from /var/www/ or so, not tested yet.
 
-Good to know:
+# Good to know:
 Linux needs these things to boot, and uboot specifies where they are located. This is also reflected during image creation in Vitis:
 0x400000 uImage
 0xA00000 ramdisk
@@ -30,7 +29,10 @@ Linux needs these things to boot, and uboot specifies where they are located. Th
 
 To create additional bitstreams loadable from Linux-side during operation, follow this tutorial:
 https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/18841645/Solution+Zynq+PL+Programming+With+FPGA+Manager
-short: create separate bitstream, create a bif file, run bootgen with correct parameters, copy over to rootfs/lib/firmware, run correct commands
+short: create separate bitstream, create a bif file for conversion with bootgen with correct parameters, copy over to rootfs/lib/firmware, run correct commands
+
+Works with: 
+Ubuntu 20.10 and Vivado/Vitis 2019.2
 
 ## THE FOLLOWING IS THE README FROM THE OFFICIAL ZYNQ BOARD SUPPORT ##
 
