@@ -1,3 +1,18 @@
+# Installation / First steps:
+1. Clone or download buildroot
+2. 'cd' into 'board' and clone this repository
+3. copy over 'zynq_ebaz_defconfig' to '../configs/'
+
+Or paste this line into a shell (for setup):
+$ git clone https://github.com/buildroot/buildroot.git; cd buildroot/board; git clone https://github.com/ribbley/ebaz.git; cp ebaz/zynq_ebaz_defconfig ../configs/; cd ..
+
+And this one for building the image:
+$ make zynq_ebaz_defconfig; make
+
+TBD:
+The output files from buildroot need to be stitched together in Vitis / bootgen from Xilinx, I would like to include this in a buildroot post-build step but dont know how yet.
+You should be able to create a general project including the first stage bootloader in Vitis and compile it. Afterwards, you can import the output.bif file included in this repo and tweak it to suit your filepaths. 
+
 Custom ebaz board config
 Features:
 - uses the current most-up-to-date xilinx-linux and xilinx-uboot repos
