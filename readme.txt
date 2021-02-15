@@ -13,6 +13,8 @@ TBD:
 The output files from buildroot need to be stitched together in Vitis / bootgen from Xilinx, I would like to include this in a buildroot post-build step but dont know how yet.
 You should be able to create a general project including the first stage bootloader in Vitis and compile it. Afterwards, you can import the output.bif file included in this repo and tweak it to suit your filepaths. 
 
+I tried to follow the tutorial over on: https://embed-me.com/ (Blog series about using the EBAZ board with petalinux) - but failed and wanted to get it to run with buildroot.
+
 Custom ebaz board config
 Features:
 - uses the current most-up-to-date xilinx-linux and xilinx-uboot repos
